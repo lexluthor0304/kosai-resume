@@ -24,22 +24,23 @@
         fullStyle: [
           `/*
 * Inspired by http://strml.net/
-* 大家好，我是方方
-* 二月了，好多公司都在招聘
-* 你是不是也在准备简历呀。
-* 说做就做，我也来写一份简历！
+* 履歴書をご覧いただきありがとうございます。
+* 蔡　恒（サイ・コウ）と申します。
+* 東京在住、来日7年目の中国人です。
+* 今はエンジニア一年目です。
+* さて、今から履歴書を作っていきましょう。
 */
 
-/* 首先给所有元素加上过渡效果 */
+/* まず基本のエフェクトをつけて */
 * {
   transition: all .3s;
 }
-/* 白色背景太单调了，我们来点背景 */
+/* 白のバックグラウンドはつまらないから，ちょっと色を付けてみる */
 html {
   color: rgb(222,222,222);
   background: rgb(0,43,54);
 }
-/* 文字离边框太近了 */
+/* 文字は枠に近すぎるから、ちょっと調整する */
 .styleEditor {
   padding: .5em;
   border: 1px solid;
@@ -48,11 +49,11 @@ html {
   margin: 2.5vh 5vw;
   height: 90vh;
 }
-/* 太高了 */
+/* 高さを調整する */
 .styleEditor {
   height: 45vh;
 }
-/* 代码高亮 */
+/* コードをハイライトで表示し */
 .token.selector{
   color: rgb(133,153,0);
 }
@@ -66,7 +67,7 @@ html {
   color: rgb(42,161,152);
 }
 
-/* 加点 3D 效果呗 */
+/* 少しおしゃれにして、3Dのエフェクトも追加しよう*/
 html{
   perspective: 1000px;
 }
@@ -75,7 +76,7 @@ html{
   transform: rotateX(-10deg) translateZ(-50px) ;
 }
 
-/* 接下来我给自己准备一个编辑器 */
+/* さて、エディターがないとだめですね */
 .resumeEditor{
   position: fixed;
   top: 50%; left: 0;
@@ -85,19 +86,19 @@ html{
   background: white; color: #222;
   overflow: auto;
 }
-/* 好了，我开始写简历了 */
+/* いざ準備完了、本番の履歴書にはいりますね */
 
 
 `,
           `
-/* 这个简历好像差点什么
- * 对了，这是 Markdown 格式的，我需要变成对 HR 更友好的格式
- * 简单，用开源工具翻译成 HTML 就行了
+/* ああ、この履歴書なんかものたりないですね
+ * そうだ！これは Markdown で記述された履歴書です。HRの方にもっと見やすくしよう
+ * よっこいしょ HTML で表示する
  */
 `
           ,
           `
-/* 再对 HTML 加点样式 */
+/* さてさてもう少し HTML を整える */
 .resumeEditor{
   padding: 2em;
 }
@@ -128,36 +129,80 @@ html{
 }
 `],
         currentMarkdown: '',
-        fullMarkdown: `方应杭
+        fullMarkdown: `蔡　恒（サイ・コウ）
 ----
 
-资深前端工程师，资深前端讲师
-现在在 [饥人谷](http://jirengu.com) 教前端课程。
+東京に住んでいる中国人です。
+法政大学文学部卒業です。
+今はエンジニアとして働いています。
+まだ一年生かつ文系出身ですので、
+わからないことが多いですが、
+プログラミング知識について一生懸命勉強しています
 
-技能
+Skills
 ----
 
-* 前端开发
-* Rails 开发
-* Node.js 开发
-* 前端授课
+* Java
+* Spring boot
+* Mybatis
+* HTML
+* CSS
+* JavaScript
+* MySQL, Oracle
+* and etc..
 
-工作经历
+Studying Program
+----
+* Python
+* Vue.js
+* Salesforce
+
+Certification
+----
+* Salesforce platform developer I
+* Business Japanese Proficiency Test J1 Level
+* Japanese Language Proficiency Test N1
+
+Career
+----
+株式会社ソフトユージング　在籍中
+https://softusing.co.jp/
+
+Project
+----
+1. Web勤怠システム　2018年9月 – 2019年1月
+    OS：Linux
+    Test－DB：MariaDB
+    Front－End：Bootstrap, Thymeleaf, JQuery
+    Back-End:Spring-boot, Mybatis and etc..
+
+    コンプライアンスの関係で詳しくご説明できませんが、
+    大雑把に自分の経験を説明致します。
+    基本設計から始まり、詳細設計と製造を担当致しました。
+    フロントエンドのデザインはもちろん、
+    バックエンドの開発も一人で行いました。
+    フロントはBootstrap,ThymeleafとJQueryで構築し、
+    バックエンドはspring bootとMybatisで作りました。
+    OSはLinux，使用するDBはoracle 12c r2でした。
+    インフラの構築も一人で担当しまして、０から作りました。
+
+2. 某大手自動車メーカーのヨーロッパ販売システムの改修と新規画面の追加　2019年1月 – 現在
+    OS：Linux
+    DB：Oracle 11c
+    言語：java
+
+    改修案件でありながら、新規画面の追加も入っております。
+    詳細設計ー製造ー単体テストー結合テストーシステムテストーユーザー受入テストを一貫して、携わっております。
+    多言語の対応、現場スタッフの通訳もしております。
+    この度の案件は来年１月までの契約です。
+
+Link
 ----
 
-1. [饥人谷](http://jirengu.com)
-2. 腾讯即时通讯平台部
-3. 阿里巴巴B2B部门
-4. 彩程知人项目组
+* [GitHub](https://github.com/lexluthor0304)
+* [個人サイト](https://tokugai.com)
 
-链接
-----
-
-* [GitHub](https://github.com/frankfang)
-* [我的文章](https://www.zhihu.com/people/zhihusucks/pins/posts)
-
-> 如果你喜欢这个效果，
-Fork [我的项目](https://github.com/jirengu-inc/animating-resume)，打造你自己的简历！
+> Fork from [GitHub](https://www.strml.net/)
 
 `
       }
