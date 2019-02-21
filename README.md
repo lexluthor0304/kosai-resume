@@ -1,2 +1,3 @@
 # My online resume
-[]: https://github.com/jirengu-inc/animating-resume "base on"
+
+[base on](https://github.com/jirengu-inc/animating-resume)
