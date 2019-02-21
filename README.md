@@ -1,3 +1,3 @@
 # My online resume
 
-[base on Git](https://github.com/jirengu-inc/animating-resume)
+[base on Github](https://github.com/jirengu-inc/animating-resume)
