@@ -37,35 +37,21 @@
 }
 /* 白のバックグラウンドはつまらないから，ちょっと色を付けてみる */
 html {
-  color: rgb(222,222,222);
-  background: rgb(0,43,54);
+  color: rgb(222,222,222); background: rgb(0,43,54);
 }
 /* 文字は枠に近すぎるから、ちょっと調整する */
 .styleEditor {
   padding: .5em;
   border: 1px solid;
+  margin: .5em;
   overflow: auto;
-  width: 90vw;
-  margin: 2.5vh 5vw;
-  height: 90vh;
-}
-/* 高さを調整する */
-.styleEditor {
-  height: 45vh;
+  width: 45vw; height: 90vh;
 }
 /* コードをハイライトで表示し */
-.token.selector{
-  color: rgb(133,153,0);
-}
-.token.property{
-  color: rgb(187,137,0);
-}
-.token.punctuation{
-  color: yellow;
-}
-.token.function{
-  color: rgb(42,161,152);
-}
+.token.selector{ color: rgb(133,153,0); }
+.token.property{ color: rgb(187,137,0); }
+.token.punctuation{ color: yellow; }
+.token.function{ color: rgb(42,161,152); }
 
 /* 少しおしゃれにして、3Dのエフェクトも追加しよう*/
 html{
@@ -73,20 +59,22 @@ html{
 }
 .styleEditor {
   position: fixed; left: 0; top: 0;
-  transform: rotateX(-10deg) translateZ(-50px) ;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-transform: rotateY(10deg) translateZ(-100px) ;
+          transform: rotateY(10deg) translateZ(-100px) ;
 }
 
 /* さて、エディターがないとだめですね */
 .resumeEditor{
-  position: fixed;
-  top: 50%; left: 0;
-  padding: .5em;  margin: 2.5vh;
-  width: 95vw; height: 45vh;
+  position: fixed; right: 0; top: 0;
+  padding: .5em;  margin: .5em;
+  width: 48vw; height: 90vh;
   border: 1px solid;
   background: white; color: #222;
   overflow: auto;
 }
-/* いざ準備完了、本番の履歴書にはいりますね */
+/* いざ準備完了、今から履歴を描きますね */
 
 
 `,
@@ -139,6 +127,10 @@ html{
 わからないことが多いですが、
 プログラミング知識について一生懸命勉強しています
 
+Educational Background
+----
+HOSEI UNIVERSITY 2014-2018
+
 Skills
 ----
 
@@ -153,12 +145,14 @@ Skills
 
 Studying Program
 ----
+
 * Python
 * Vue.js
 * Salesforce
 
 Certification
 ----
+
 * Salesforce platform developer I
 * Business Japanese Proficiency Test J1 Level
 * Japanese Language Proficiency Test N1
@@ -174,7 +168,7 @@ Project
     OS：Linux<br>
     Test－DB：MariaDB<br>
     Front－End：Bootstrap, Thymeleaf, JQuery<br>
-    Back-End:Spring-boot, Mybatis and etc..<br><br>
+    Back-End:Spring-boot, Mybatis and etc..<br>
 
     コンプライアンスの関係で詳しくご説明できませんが、<br>
     大雑把に自分の経験を説明致します。<br>
@@ -189,12 +183,12 @@ Project
 2. 某大手自動車メーカーのヨーロッパ販売システムの改修と新規画面の追加　2019年1月 – 現在<br>
     OS：Linux<br>
     DB：Oracle 11c<br>
-    言語：java<br><br>
+    言語：Java<br>
 
     改修案件でありながら、新規画面の追加も入っております。<br>
     詳細設計ー製造ー単体テストー結合テストーシステムテストーユーザー受入テストを一貫して、携わっております。<br>
     多言語の対応、現場スタッフの通訳もしております。<br>
-    この度の案件は来年１月までの契約です。<br><br>
+    この度の案件は来年１月までの契約です。<br>
 
 Link
 ----
@@ -202,7 +196,7 @@ Link
 * [GitHub](https://github.com/lexluthor0304)
 * [個人サイト](https://tokugai.com)
 
-> Fork from [GitHub](https://www.strml.net/)
+> Fork on [GitHub](https://www.strml.net/)
 
 `
       }
@@ -222,9 +216,6 @@ Link
       showHtml: function () {
         return new Promise((resolve, reject) => {
           this.enableHtml = true
-          this.$nextTick(() => {
-            this.$refs.resumeEditor.goTop()
-          })
           resolve()
         })
       },
@@ -284,7 +275,6 @@ Link
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    min-height: 100vh; position: relative;
   }
 
   html {
@@ -293,5 +283,4 @@ Link
   *{
     box-sizing: border-box;
   }
-
 </style>
